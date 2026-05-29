@@ -1,0 +1,233 @@
+{
+  "meta": { "title": "Career Simulator — find your path", "description": "Career simulator: jobs, salaries, AI-risk and skill roadmap" },
+  "nav": { "demo": "Demo", "simulate": "Simulate", "catalog": "Catalog", "premium": "Premium" },
+  "disclaimer": {
+    "banner": "Salary and AI-risk estimates are approximate — not professional career advice",
+    "footer": "Career Simulator — estimates only, not career counseling."
+  },
+  "common": {
+    "back": "← Back", "next": "Next →", "stepOf": "Step {n} of {total}",
+    "loading": "Finding careers…", "selectCountry": "Country", "selectCity": "City / region"
+  },
+  "home": {
+    "tagline": "Career Simulator", "title": "Choose your future career",
+    "titleHighlight": "20 questions — 5 career paths", "subtitle": "Professional assessment → 5 roles with salary, AI-risk, and roadmap. 1000+ careers in the catalog.",
+    "ctaSimulate": "Start simulation", "ctaDemo": "View demo", "freeNote": "1 simulation per day · no signup",
+    "demoTitle": "Demo: age 17, loves coding", "demoSubtitle": "Sample match: age 17, loves coding",
+    "allProfessions": "All {count} careers →",
+    "featureAiRisk": "AI-risk", "featureAiRiskDesc": "How vulnerable the job is to automation — and why.",
+    "featureDay": "Day in the life", "featureDayDesc": "A real timeline, not vague advice.",
+    "featureRoadmap": "Roadmap", "featureRoadmapDesc": "5–10 skills with a first step in 30 days.",
+    "b2bTitle": "For schools", "b2bDesc": "Class reports and lesson simulations", "b2bCta": "Join waitlist"
+  },
+  "catalog": {
+    "title": "Career catalog",
+    "subtitle": "{count} careers with salary, AI-risk, day timeline, and roadmap",
+    "search": "Search",
+    "searchPlaceholder": "Job title…",
+    "category": "Field",
+    "allCategories": "All fields",
+    "showing": "Showing {from}–{to} of {total}",
+    "empty": "No matches. Try another search.",
+    "prev": "Previous",
+    "next": "Next",
+    "matchHint": "After simulation, compare with your top 5 in the catalog",
+    "categories": {
+      "it": "IT & digital",
+      "medicine": "Medicine",
+      "creative": "Creative & design",
+      "engineering": "Engineering",
+      "business": "Business",
+      "education": "Education",
+      "law": "Law",
+      "trades": "Trades & beauty",
+      "hospitality": "Hospitality",
+      "media": "Media",
+      "science": "Science",
+      "public": "Public & safety",
+      "sports": "Sports"
+    }
+  },
+  "wizard": {
+    "introTitle": "Professional career profile",
+    "q01Title": "Age", "q01Subtitle": "Baseline for career horizon and training pathways",
+    "q02Title": "Current education stage", "q02Subtitle": "Grade, university, or career change — affects roadmap realism",
+    "q03Title": "Primary professional domain", "q03Subtitle": "Main field where you see your career vector",
+    "q04Title": "Specialization within domain", "q04Subtitle": "Refines matching across 1000+ catalog roles",
+    "q05Title": "Additional context", "q05Subtitle": "Brief note on interests or projects (optional)",
+    "q05Placeholder": "e.g. olympiad programming, interest in UX…",
+    "q06Title": "Critical exclusion factor", "q06Subtitle": "One hard constraint to filter recommendations",
+    "q07Title": "Secondary constraint", "q07Subtitle": "Another factor or «None»",
+    "q08Title": "Key competency", "q08Subtitle": "Skill you are developing or consider a strength",
+    "q09Title": "Target labor market", "q09Subtitle": "Country sets currency and salary bands",
+    "q10Title": "Region", "q10Subtitle": "Used for regional salary adjustment",
+    "q11Title": "Target income level", "q11Subtitle": "Expected monthly range for your region",
+    "q12Title": "Work format", "q12Subtitle": "Remote, hybrid, or office",
+    "q13Title": "Career priority", "q13Subtitle": "Stability, creativity, income, or impact",
+    "q14Title": "Acceptable workload", "q14Subtitle": "Comfortable stress and pace level",
+    "q15Title": "Work schedule model", "q15Subtitle": "Fixed hours, flexibility, or project cycles",
+    "q16Title": "Planning horizon", "q16Subtitle": "Timeframe for your first meaningful career goal",
+    "q17Title": "Organization type", "q17Subtitle": "Environment where you prefer to build a career",
+    "q18Title": "Team collaboration", "q18Subtitle": "Preferred team size and interaction style",
+    "q19Title": "Competency development", "q19Subtitle": "How you plan to grow professionally",
+    "q20Title": "Primary career driver", "q20Subtitle": "Main motivator in choosing a profession",
+    "submit": "Build career profile", "skip": "Skip →", "errRequired": "Pick an option to continue",
+    "errRateLimit": "Could not load results. Try again.",
+    "rateLimitHint": "Today's free run was already used — we'll still show your result; another run tomorrow or Premium.",
+    "resetLimit": "Reset limit (test)", "ageLabel": "Age", "optionNone": "None of these"
+  },
+  "primaryInterest": {
+    "tech": "Tech & IT", "creative": "Creativity & design", "people": "People & communication",
+    "medicine": "Medicine & health", "business": "Business & money", "sport_media": "Sports & media",
+    "science": "Science & research", "other": "Other / not sure yet"
+  },
+  "salaryBand": {
+    "band1": "Entry level", "band2": "Below average", "band3": "Average",
+    "band4": "Above average", "band5": "Top of region"
+  },
+  "workFormat": { "remote": "Remote", "hybrid": "Hybrid", "office": "Office" },
+  "priority": {
+    "stability": "Stability", "creativity": "Creativity", "money": "High income", "impact": "Helping people"
+  },
+  "stress": { "low": "Low stress", "medium": "Medium", "high": "High — OK" },
+  "schedule": { "fixed": "Fixed schedule", "flexible": "Flexible / async", "project": "Project sprints" },
+  "careerHorizon": {
+    "one_two_years": "1–2 years — first step",
+    "three_five_years": "3–5 years — solid trajectory",
+    "five_plus": "5+ years — long-term specialization",
+    "exploring": "Still exploring"
+  },
+  "orgType": {
+    "startup": "Startup / scale-up",
+    "corporate": "Corporation",
+    "public_sector": "Public / NGO",
+    "freelance": "Freelance / own business"
+  },
+  "teamPreference": {
+    "solo": "Independent work",
+    "small_team": "Team up to 10",
+    "large_org": "Large organization",
+    "mixed": "Mixed format"
+  },
+  "learningPath": {
+    "university": "University / college",
+    "courses": "Courses & certifications",
+    "self_taught": "Self-study & projects",
+    "mentorship": "Mentorship / internship"
+  },
+  "motivationFocus": {
+    "expertise": "Expertise & mastery",
+    "impact": "Social impact",
+    "income": "Financial growth",
+    "balance": "Work-life balance",
+    "prestige": "Status & recognition"
+  },
+  "interests": {
+    "code": "coding", "games": "games", "math": "math", "design": "design", "people": "people",
+    "medicine": "medicine", "marketing": "marketing", "business": "business", "creativity": "creativity",
+    "analytics": "analytics", "sports": "sports", "music": "music", "science": "science",
+    "law": "law", "engineering": "engineering", "languages": "languages"
+  },
+  "avoid": {
+    "routine": "routine work", "sales": "sales & cold calls", "blood": "blood & medical procedures",
+    "code": "programming", "office": "office 9–5", "night_shifts": "night shifts", "public_speaking": "public speaking"
+  },
+  "skills": {
+    "english": "English", "excel": "Excel / spreadsheets", "drawing": "drawing", "python": "Python",
+    "communication": "communication", "driving": "driver's license"
+  },
+  "lifestyle": {
+    "remote": "Remote work", "travel": "Travel", "stability": "Stable 9–5",
+    "creativity": "Creativity", "low_stress": "Low stress"
+  },
+  "educationStage": {
+    "school_7": "Grade 7", "school_8": "Grade 8", "school_9": "Grade 9",
+    "school_10": "Grade 10", "school_11": "Grade 11",
+    "school_graduate": "Graduate, choosing college",
+    "student": "College / university student",
+    "career_change": "Career change", "employed": "Already employed"
+  },
+  "country": {
+    "RU": "Russia", "KZ": "Kazakhstan", "UZ": "Uzbekistan", "BY": "Belarus", "KG": "Kyrgyzstan", "REMOTE": "Remote (global)"
+  },
+  "city": {
+    "ru_moscow": "Moscow", "ru_spb": "Saint Petersburg", "ru_kazan": "Kazan", "ru_novosibirsk": "Novosibirsk",
+    "ru_ekb": "Yekaterinburg", "ru_regions": "Other Russia", "ru_remote": "Remote from Russia",
+    "kz_almaty": "Almaty", "kz_astana": "Astana", "kz_shymkent": "Shymkent", "kz_remote": "Remote from KZ",
+    "uz_tashkent": "Tashkent", "uz_samarkand": "Samarkand", "uz_remote": "Remote from UZ",
+    "by_minsk": "Minsk", "by_regions": "Other Belarus", "by_remote": "Remote from BY",
+    "kg_bishkek": "Bishkek", "kg_regions": "Other Kyrgyzstan", "kg_remote": "Remote from KG",
+    "remote_global": "Global remote"
+  },
+  "results": {
+    "title": "Your 5 careers",
+    "subtitle": "Matched to your age and grade — pick one for day simulation and roadmap",
+    "intro": "What each job is and when it fits your path",
+    "catalogTitle": "{count} more careers in the catalog",
+    "catalogSubtitle": "Open any — day in the life, salary, and roadmap for your profile",
+    "catalogCta": "Open catalog",
+    "retry": "Run again", "noResults": "No results. Start simulation.", "start": "Start", "pdfPremium": "PDF for parents (Premium)"
+  },
+  "profession": {
+    "notFound": "Profession not found in the catalog.",
+    "notFoundCta": "Open catalog",
+    "back": "← Back to results", "dayTitle": "Day in the life", "roadmapTitle": "Skills roadmap",
+    "roadmapHint": "Progress saved in browser", "progress": "Progress: {done} / {total}",
+    "shareTitle": "Share AI-risk", "downloadPng": "Download PNG for Stories",
+    "pdfPremium": "Full PDF (Premium)", "aiRisk": "AI-risk", "perMonth": "/ mo",
+    "select": "Select", "selected": "Selected ✓", "openDay": "Day in the life →",
+    "aboutTitle": "About the job", "whenTitle": "When for you"
+  },
+  "premium": {
+    "title": "Premium",
+    "desc": "Unlimited runs, parent PDF, and history — coming soon. Free tier: 1 simulation per day.",
+    "comingSoon": "Paid plans launch in v1.1. Join the waitlist for early access.",
+    "waitlistEmail": "Email",
+    "waitlistSubmit": "Join Premium waitlist",
+    "waitlistSuccess": "Thanks! We'll email when Premium opens.",
+    "price": "4.99", "perMonth": "/mo",
+    "feat1": "✓ Unlimited simulations",
+    "feat2": "✓ PDF / TXT parent report",
+    "feat3": "✓ Simulation history",
+    "feat4": "✓ Compare careers (soon)",
+    "download": "Download last report (TXT)",
+    "downloadPdf": "Download parent PDF",
+    "payOneTime": "Buy report — $2.99",
+    "needSimulate": "Run a simulation first",
+    "stripeNote": "Stripe Payment Link when configured, else waitlist."
+  },
+  "legal": {
+    "contact": "Contact",
+    "footer": { "privacy": "Privacy", "terms": "Terms", "about": "About" },
+    "privacy": {
+      "title": "Privacy Policy",
+      "body": "Career Simulator does not require sign-up for the free simulation.\n\nData we process: your wizard answers, locale, checklist progress, and simulation history are stored in your browser localStorage. Optional Supabase sync may store the same in the cloud if enabled.\n\nOn POST /api/simulate we use a hashed daily IP counter for the free rate limit (default 1/day). OpenAI keys, if set, stay server-side only.\n\nWe do not sell personal data. B2B/Premium waitlist emails are stored locally until a backend is connected.\n\nAges 12+. Under 16 we recommend using the app with a parent.\n\nQuestions: hello@careersimulator.app"
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "body": "Career Simulator is an educational tool, not career counseling, therapy, or legal advice.\n\nSalaries, AI-risk, and roadmaps are estimates. Real outcomes depend on region, experience, and employers.\n\nUse at your own risk. We do not guarantee employment or accuracy.\n\nAutomated abuse of the API (scraping, bypassing rate limits) is prohibited.\n\nWe may update these terms on this page. Continued use means you accept the current version."
+    },
+    "about": {
+      "title": "About",
+      "body": "Career Simulator helps teens explore careers: 15 questions → 5 matches with salary, AI-risk, and a 30-day roadmap. 200+ professions in the catalog.\n\nNot a replacement for a career counselor. Use results to start conversations.\n\nSome profession copy is templated; featured roles are enriched manually and via LLM. See the disclaimer banner.\n\nSchools: /b2b. Premium waitlist: /premium."
+    }
+  },
+  "b2b": {
+    "title": "B2B for schools", "desc": "Class simulations and reports",
+    "email": "Teacher email", "school": "School name", "submit": "Join waitlist", "success": "Saved. We'll email you."
+  },
+  "demo": {
+    "tag": "Demo", "title": "Age 17, loves code and games", "subtitle": "Sample output", "ownSim": "Your simulation →"
+  },
+  "matchReason": "Matches interests ({interests}) and lifestyle ({lifestyle}) — «{title}» fits {region}.",
+  "simulationDisclaimer": "Salary and AI-risk estimates are approximate and not professional career counseling.",
+  "aiRisk": {
+    "tooltip": "AI-risk: how much routine work in this job may be automated by AI by 2030",
+    "summary": "AI-risk measures automation exposure, not «will this job disappear».",
+    "learnMore": "How we calculate →",
+    "methodologyTitle": "AI-risk and salary methodology",
+    "methodologyBody": "AI-risk (0–100%) is an expert model of tasks LLMs and automation may take over by 2030. Lower scores mean more human interaction, physical work, or regulation. Higher scores mean more templates and routine.\n\nSalaries are category baselines scaled by region — orientation for teens, not a job offer.\n\nSome profession pages use template copy; featured roles are LLM-enriched (badge on page).\n\nNot a career counselor. Ages 12+.",
+    "contentEnriched": "Detailed content",
+    "contentTemplate": "Basic template"
+  }
+}

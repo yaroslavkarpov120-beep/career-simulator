@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0f14;
+  --foreground: #e8eef4;
+  --card: #121a24;
+  --muted: #8b9cb3;
+}
+
+html {
+  background: #0a0f14;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  min-height: 100vh;
+}
+
+/* Fallback if CSS variables fail */
+body {
+  background-color: #0a0f14;
+  color: #e8eef4;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-300 to-brand-500 bg-clip-text;
+    color: #5eead4;
+  }
+  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    .text-gradient {
+      color: transparent;
+    }
+  }
+  .glass {
+    @apply border border-white/10 bg-white/5 backdrop-blur-md;
+  }
+}

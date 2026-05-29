@@ -1,0 +1,38 @@
+{
+  "name": "career-simulator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "bash scripts/dev.sh",
+    "dev:next": "next dev -p 3456",
+    "build": "bash -c 'source scripts/ensure-node.sh && next build'",
+    "start": "bash -c 'source scripts/ensure-node.sh && next start -p 3456'",
+    "setup": "bash -c 'source scripts/ensure-node.sh && npm install'",
+    "lint": "bash -c 'source scripts/ensure-node.sh && next build'",
+    "build:catalog": "node scripts/build-catalog.mjs",
+    "validate:professions": "node scripts/validate-professions.mjs",
+    "generate:professions": "node scripts/generate-professions.mjs",
+    "generate:featured": "node scripts/generate-professions.mjs --featured"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "html-to-image": "^1.11.13",
+    "next": "^15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.4",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.2"
+  }
+}

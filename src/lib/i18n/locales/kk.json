@@ -1,0 +1,197 @@
+{
+  "meta": { "title": "Career Simulator — мансап таңдау", "description": "Мансап симуляторы: кәсіптер, жалақы, AI-risk және roadmap" },
+  "nav": { "demo": "Демо", "simulate": "Симуляция", "catalog": "Каталог", "premium": "Premium" },
+  "disclaimer": {
+    "banner": "Жалақы мен AI-risk бағалары шамамен — кәсіби кеңес емес",
+    "footer": "Career Simulator — шамамен бағалар, кәсіби кеңес емес."
+  },
+  "common": {
+    "back": "← Артқа", "next": "Әрі →", "stepOf": "Қадам {n} / {total}",
+    "loading": "Кәсіптер іздеуде…", "selectCountry": "Ел", "selectCity": "Қала / аймақ"
+  },
+  "home": {
+    "tagline": "Career Simulator", "title": "Болашақ кәсібіңді таңда",
+    "titleHighlight": "20 сұрақ — 5 мансап нұсқасы", "subtitle": "Кәсіби сауалнама → 5 роль, жалақы, AI-risk және roadmap. Каталогта 1000+ кәсіп.",
+    "ctaSimulate": "Симуляцияны бастау", "ctaDemo": "Демо көру", "freeNote": "Күніне 1 симуляция",
+    "demoTitle": "Демо: 17 жаста, код ұнайды", "demoSubtitle": "Мысал профиль",
+    "allProfessions": "Барлық {count} кәсіп →",
+    "featureAiRisk": "AI-risk", "featureAiRiskDesc": "Автоматтану қаупі.",
+    "featureDay": "Өмірдегі күн", "featureDayDesc": "Нақты кесте.",
+    "featureRoadmap": "Roadmap", "featureRoadmapDesc": "5–10 дағды, 30 күнде бірінші қадам.",
+    "b2bTitle": "Мектептерге", "b2bDesc": "Сынып есептері", "b2bCta": "Waitlist"
+  },
+  "catalog": {
+    "title": "Кәсіптер каталогы",
+    "subtitle": "Каталогта {count} кәсіп",
+    "search": "Іздеу", "searchPlaceholder": "Кәсіп атауы…",
+    "category": "Сала", "allCategories": "Барлық салалар",
+    "showing": "{from}–{to} / {total}",
+    "empty": "Табылмады", "prev": "Артқа", "next": "Әрі",
+    "matchHint": "Симуляциядан кейін каталогпен салыстырыңыз",
+    "categories": {
+      "it": "IT", "medicine": "Медицина", "creative": "Шығармашылық",
+      "engineering": "Инженерия", "business": "Бизнес", "education": "Білім",
+      "law": "Құқық", "trades": "Кәсіп", "hospitality": "HoReCa",
+      "media": "Медиа", "science": "Ғылым", "public": "Мемлекет", "sports": "Спорт"
+    }
+  },
+  "wizard": {
+    "introTitle": "Болашақ кәсібіңді таңда",
+    "q01Title": "Жасыңыз?", "q01Subtitle": "Жас кеңес тонын анықтайды",
+    "q02Title": "Қай сыныпта оқисың?", "q02Subtitle": "Қазіргі сыныбыңды таңда — жасты емес",
+    "q03Title": "Не жақын?", "q03Subtitle": "Негізгі қызығушылық",
+    "q04Title": "Нақтылаңыз", "q04Subtitle": "Бір нұсқа",
+    "q05Title": "Өз сөзіңізбен", "q05Subtitle": "Міндетті емес",
+    "q05Placeholder": "Ойындар ұнайды…",
+    "q06Title": "Нені қаламайсыз?", "q06Subtitle": "Бір «жоқ»",
+    "q07Title": "Тағы не?", "q07Subtitle": "Екінші немесе «Ештеңе»",
+    "q08Title": "Күшті дағды", "q08Subtitle": "Бір нұсқа",
+    "q09Title": "Ел", "q09Subtitle": "Валютаға әсер етеді",
+    "q10Title": "Қала", "q10Subtitle": "Тізімнен таңдаңыз",
+    "q11Title": "Жалақы деңгейі", "q11Subtitle": "Айлық вилка",
+    "q12Title": "Формат", "q12Subtitle": "Бір нұсқа",
+    "q13Title": "Не маңызды?", "q13Subtitle": "Басымдық",
+    "q14Title": "Стресс", "q14Subtitle": "Қаншалықты OK",
+    "q15Title": "Кесте", "q15Subtitle": "Жұмыс күнінің моделі",
+    "q16Title": "Жоспарлау мерзімі", "q16Subtitle": "Бірінші мансаптық мақсат мерзімі",
+    "q17Title": "Ұйым түрі", "q17Subtitle": "Қай ортада карьера құру",
+    "q18Title": "Командалық жұмыс", "q18Subtitle": "Команда өлшемі мен форматы",
+    "q19Title": "Дағдыларды дамыту", "q19Subtitle": "Кәсіби өсу жолы",
+    "q20Title": "Негізгі мотивация", "q20Subtitle": "Кәсіп таңдаудағы басты фактор",
+    "submit": "Кәсіби профиль құру", "skip": "Өткізу →", "errRequired": "Жалғастыру үшін таңдаңыз",
+    "errRateLimit": "Нәтиже жүктелмеді.", "rateLimitHint": "Бүгінгі тегін лимит қолданылды — нәтиже көрсетеміз.",
+    "resetLimit": "Лимитті қалпына келтіру",
+    "ageLabel": "Жас", "optionNone": "Ештеңе"
+  },
+  "primaryInterest": {
+    "tech": "IT", "creative": "Шабыт және дизайн", "people": "Адамдар",
+    "medicine": "Медицина", "business": "Бизнес", "sport_media": "Спорт және медиа",
+    "science": "Ғылым", "other": "Басқа"
+  },
+  "salaryBand": {
+    "band1": "Бастапқы", "band2": "Төмен", "band3": "Орташа", "band4": "Жоғары", "band5": "Максимум"
+  },
+  "workFormat": { "remote": "Қашықтан", "hybrid": "Гибрид", "office": "Офис" },
+  "priority": {
+    "stability": "Тұрақтылық", "creativity": "Шабыт", "money": "Табыс", "impact": "Адамдарға пайда"
+  },
+  "stress": { "low": "Төмен", "medium": "Орташа", "high": "Жоғары — OK" },
+  "schedule": { "fixed": "Тұрақты кесте", "flexible": "Икемді", "project": "Жобалық" },
+  "careerHorizon": {
+    "one_two_years": "1–2 жыл",
+    "three_five_years": "3–5 жыл",
+    "five_plus": "5+ жыл",
+    "exploring": "Зерттеуде"
+  },
+  "orgType": {
+    "startup": "Стартап",
+    "corporate": "Кorporatsiya",
+    "public_sector": "Мемлекет / ҚҚ",
+    "freelance": "Фриланс"
+  },
+  "teamPreference": {
+    "solo": "Жеке жұмыс",
+    "small_team": "Команда 10-ға дейін",
+    "large_org": "Үлкен ұйым",
+    "mixed": "Аралас"
+  },
+  "learningPath": {
+    "university": "Университет",
+    "courses": "Курстар",
+    "self_taught": "Өз бетінше",
+    "mentorship": "Менторлық"
+  },
+  "motivationFocus": {
+    "expertise": "Мамандық",
+    "impact": "Әлеуметтік әсер",
+    "income": "Табыс",
+    "balance": "Баланс",
+    "prestige": "Мәртебе"
+  },
+  "interests": {
+    "code": "код", "games": "ойындар", "math": "математика", "design": "дизайн", "people": "адамдар",
+    "medicine": "медицина", "marketing": "маркетинг", "business": "бизнес", "creativity": "шабыт",
+    "analytics": "аналитика", "sports": "спорт", "music": "музыка", "science": "ғылым",
+    "law": "заң", "engineering": "инженерия", "languages": "тілдер"
+  },
+  "avoid": {
+    "routine": "рутина", "sales": "сату", "blood": "қан", "code": "кодтау",
+    "office": "кеңсе 5/2", "night_shifts": "түнгі ауысым", "public_speaking": "сөйлеу"
+  },
+  "skills": {
+    "english": "ағылшын", "excel": "Excel", "drawing": "сурет", "python": "Python",
+    "communication": "коммуникация", "driving": "жүргізуші куәлігі"
+  },
+  "lifestyle": {
+    "remote": "Қашықтан", "travel": "Саяхат", "stability": "Тұрақты 9–5",
+    "creativity": "Шабыт", "low_stress": "Аз стресс"
+  },
+  "educationStage": {
+    "school_7": "7 сынып", "school_8": "8 сынып", "school_9": "9 сынып",
+    "school_10": "10 сынып", "school_11": "11 сынып",
+    "school_graduate": "Түлек, колледж/университет таңдауда",
+    "student": "Студент", "career_change": "Мансап ауыстыру", "employed": "Жұмыс істеймін"
+  },
+  "country": {
+    "RU": "Ресей", "KZ": "Қазақстан", "UZ": "Өзбекстан", "BY": "Беларусь", "KG": "Қырғызстан", "REMOTE": "Қашықтан (әлем)"
+  },
+  "city": {
+    "ru_moscow": "Мәскеу", "ru_spb": "Санкт-Петербург", "ru_kazan": "Қазан", "ru_novosibirsk": "Новосібір",
+    "ru_ekb": "Екатеринбург", "ru_regions": "РФ басқа", "ru_remote": "РФ қашықтан",
+    "kz_almaty": "Алматы", "kz_astana": "Астана", "kz_shymkent": "Шымкент", "kz_remote": "KZ қашықтан",
+    "uz_tashkent": "Ташкент", "uz_samarkand": "Самарқанд", "uz_remote": "UZ қашықтан",
+    "by_minsk": "Минск", "by_regions": "Басқа BY", "by_remote": "BY қашықтан",
+    "kg_bishkek": "Бішкек", "kg_regions": "Басқа KG", "kg_remote": "KG қашықтан",
+    "remote_global": "Жаһандық remote"
+  },
+  "results": {
+    "title": "5 кәсібіңіз", "subtitle": "Жасыңа және сыныбыңа сай", "intro": "Кәсіп не және қашан бастау",
+    "catalogTitle": "Каталогта тағы {count} кәсіп",
+    "catalogSubtitle": "Кез келгенін аш — күн, жалақы, roadmap",
+    "catalogCta": "Каталогты ашу",
+    "retry": "Қайта", "noResults": "Нәтиже жоқ",
+    "start": "Бастау", "pdfPremium": "PDF (Premium)"
+  },
+  "profession": {
+    "notFound": "Кәсіп каталогта жоқ.",
+    "notFoundCta": "Каталогты ашу",
+    "back": "← Нәтижелер", "dayTitle": "Күн", "roadmapTitle": "Roadmap",
+    "roadmapHint": "Браузерде сақталады", "progress": "{done} / {total}",
+    "shareTitle": "AI-risk бөлісу", "downloadPng": "PNG жүктеу", "pdfPremium": "PDF (Premium)",
+    "aiRisk": "AI-risk", "perMonth": "/ ай",     "select": "Таңдау", "selected": "Таңдалды ✓", "openDay": "Күн →",
+    "aboutTitle": "Кәсіп туралы", "whenTitle": "Сен үшін қашан"
+  },
+  "premium": {
+    "title": "Premium", "desc": "Шексіз симуляция және PDF — жақында. Қазір: күніне 1 тегін.",
+    "comingSoon": "Төлем v1.1-де. Email қалдырыңыз.",
+    "waitlistEmail": "Email", "waitlistSubmit": "Premium waitlist", "waitlistSuccess": "Рақмет! Хабарлаймыз.",
+    "price": "2990", "perMonth": "/ай",
+    "feat1": "✓ Шексіз", "feat2": "✓ PDF", "feat3": "✓ Тарих", "feat4": "✓ Салыстыру (жақында)",
+    "download": "TXT жүктеу", "downloadPdf": "PDF жүктеу", "payOneTime": "Есеп 990₸",
+    "needSimulate": "Алдымен симуляция", "stripeNote": "Stripe сілтеме немесе waitlist"
+  },
+  "legal": {
+    "contact": "Байланыс",
+    "footer": { "privacy": "Құпиялылық", "terms": "Шарттар", "about": "Жоба туралы" },
+    "privacy": { "title": "Құпиялылық саясаты", "body": "Толық мәтін орысша: /privacy?lang=ru. Деректер браузер localStorage-та; серверде IP бойынша күндік лимит. 12+. hello@careersimulator.app" },
+    "terms": { "title": "Пайдалану шарттары", "body": "Career Simulator — білім беру құралы, кәсіби кеңес емес. Бағалар шамамен. Толық мәтін: /terms?lang=ru" },
+    "about": { "title": "Жоба туралы", "body": "15 сұрақ → 5 кәсіп, AI-risk, roadmap. 200+ кәсіп каталогта. Кәсіби кеңес орнына емес." }
+  },
+  "b2b": {
+    "title": "Мектептерге B2B", "desc": "Сынып есептері", "email": "Email", "school": "Мектеп", "submit": "Waitlist", "success": "Сақталды"
+  },
+  "demo": {
+    "tag": "Демо", "title": "17 жаста, код ұнайды", "subtitle": "Мысал", "ownSim": "Өз симуляцияңыз →"
+  },
+  "matchReason": "Қызығушылық ({interests}) және lifestyle ({lifestyle}) — «{title}» {region} үшін.",
+  "simulationDisclaimer": "Бағалар шамамен, кәсіби кеңес емес.",
+  "aiRisk": {
+    "tooltip": "AI-risk — автоматтану ықтималдығы",
+    "summary": "AI-risk — автоматтану бағасы.",
+    "learnMore": "Толығырақ →",
+    "methodologyTitle": "AI-risk әдістемесі",
+    "methodologyBody": "AI-risk 0–100% — 2030ға дейін автоматтануы мүмкін тапсырмалар моделі. Жалақы — аймақ бойынша масштаб. Кәсіби кеңес емес.",
+    "contentEnriched": "Толық контент",
+    "contentTemplate": "Негізгі шаблон"
+  }
+}

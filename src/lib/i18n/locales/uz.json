@@ -1,0 +1,197 @@
+{
+  "meta": { "title": "Career Simulator — kasb tanlash", "description": "Kasb simulyatori: kasblar, maosh, AI-risk va roadmap" },
+  "nav": { "demo": "Demo", "simulate": "Simulyatsiya", "catalog": "Katalog", "premium": "Premium" },
+  "disclaimer": {
+    "banner": "Maosh va AI-risk baholari taxminiy — professional maslahat emas",
+    "footer": "Career Simulator — taxminiy baholar, maslahat emas."
+  },
+  "common": {
+    "back": "← Orqaga", "next": "Keyingi →", "stepOf": "Qadam {n} / {total}",
+    "loading": "Kasblar qidirilmoqda…", "selectCountry": "Mamlakat", "selectCity": "Shahar / hudud"
+  },
+  "home": {
+    "tagline": "Career Simulator", "title": "Kelajak kasbingni tanla",
+    "titleHighlight": "20 savol — 5 martaba", "subtitle": "Kasbiy so'rovnoma → 5 rol, maosh, AI-risk va roadmap. Katalogda 1000+ kasb.",
+    "ctaSimulate": "Simulyatsiyani boshlash", "ctaDemo": "Demoni ko'rish", "freeNote": "Kuniga 1 simulyatsiya",
+    "demoTitle": "Demo: 17 yosh, kod yoqadi", "demoSubtitle": "Namuna profil",
+    "allProfessions": "Barcha {count} kasb →",
+    "featureAiRisk": "AI-risk", "featureAiRiskDesc": "Avtomatlashtirish xavfi.",
+    "featureDay": "Hayotdagi kun", "featureDayDesc": "Haqiqiy jadval.",
+    "featureRoadmap": "Roadmap", "featureRoadmapDesc": "5–10 ko'nikma, 30 kun.",
+    "b2bTitle": "Maktablar uchun", "b2bDesc": "Sinf hisobotlari", "b2bCta": "Waitlist"
+  },
+  "catalog": {
+    "title": "Kasblar katalogi",
+    "subtitle": "Katalogda {count} kasb",
+    "search": "Qidiruv", "searchPlaceholder": "Kasb nomi…",
+    "category": "Soha", "allCategories": "Barcha sohalar",
+    "showing": "{from}–{to} / {total}",
+    "empty": "Topilmadi", "prev": "Orqaga", "next": "Keyingi",
+    "matchHint": "Simulyatsiyadan keyin katalog bilan solishtiring",
+    "categories": {
+      "it": "IT", "medicine": "Tibbiyot", "creative": "Ijod",
+      "engineering": "Muhandislik", "business": "Biznes", "education": "Ta'lim",
+      "law": "Huquq", "trades": "Kasb-hunar", "hospitality": "HoReCa",
+      "media": "Media", "science": "Fan", "public": "Davlat", "sports": "Sport"
+    }
+  },
+  "wizard": {
+    "introTitle": "Kelajak kasbingni tanla",
+    "q01Title": "Yoshingiz?", "q01Subtitle": "Yosh maslahat toniga ta'sir qiladi",
+    "q02Title": "Qaysi sinfda o'qiysan?", "q02Subtitle": "Hozirgi sinfingni tanla — yoshni emas",
+    "q03Title": "Nima yaqinroq?", "q03Subtitle": "Asosiy qiziqish",
+    "q04Title": "Aniqroq", "q04Subtitle": "Bitta variant",
+    "q05Title": "O'z so'zlaringiz bilan", "q05Subtitle": "Ixtiyoriy",
+    "q05Placeholder": "O'yinlar yoqadi…",
+    "q06Title": "Nimani xohlamaysiz?", "q06Subtitle": "Bitta «yo'q»",
+    "q07Title": "Yana nima?", "q07Subtitle": "Ikkinchi yoki «Hech narsa»",
+    "q08Title": "Kuchli ko'nikma", "q08Subtitle": "Bitta variant",
+    "q09Title": "Mamlakat", "q09Subtitle": "Valyutaga ta'sir",
+    "q10Title": "Shahar", "q10Subtitle": "Ro'yxatdan tanlang",
+    "q11Title": "Maosh darajasi", "q11Subtitle": "Oylik diapazon",
+    "q12Title": "Format", "q12Subtitle": "Bitta variant",
+    "q13Title": "Nima muhim?", "q13Subtitle": "Ustuvorlik",
+    "q14Title": "Stress", "q14Subtitle": "Qanchalik OK",
+    "q15Title": "Jadval", "q15Subtitle": "Ish kuni modeli",
+    "q16Title": "Rejalash ufq", "q16Subtitle": "Birinchi maqsad muddati",
+    "q17Title": "Tashkilot turi", "q17Subtitle": "Qayerda karera qurish",
+    "q18Title": "Jamoa", "q18Subtitle": "Jamoa hajmi va formati",
+    "q19Title": "Ko'nikmalar", "q19Subtitle": "Kasbiy o'sish yo'li",
+    "q20Title": "Motivatsiya", "q20Subtitle": "Asosiy omil",
+    "submit": "Kasbiy profil", "skip": "O'tkazish →", "errRequired": "Davom etish uchun tanlang",
+    "errRateLimit": "Natija yuklanmadi.", "rateLimitHint": "Bugungi bepul limit ishlatilgan — natijani baribir ko'rsatamiz.",
+    "resetLimit": "Limitni tiklash",
+    "ageLabel": "Yosh", "optionNone": "Hech biri"
+  },
+  "primaryInterest": {
+    "tech": "IT", "creative": "Ijod va dizayn", "people": "Odamlar",
+    "medicine": "Tibbiyot", "business": "Biznes", "sport_media": "Sport va media",
+    "science": "Fan", "other": "Boshqa"
+  },
+  "salaryBand": {
+    "band1": "Boshlang'ich", "band2": "Past", "band3": "O'rta", "band4": "Yuqori", "band5": "Maksimum"
+  },
+  "workFormat": { "remote": "Masofadan", "hybrid": "Gibrid", "office": "Ofis" },
+  "priority": {
+    "stability": "Barqarorlik", "creativity": "Ijod", "money": "Daromad", "impact": "Foyda"
+  },
+  "stress": { "low": "Past", "medium": "O'rta", "high": "Yuqori — OK" },
+  "schedule": { "fixed": "Doimiy jadval", "flexible": "Moslashuvchan", "project": "Loyiha" },
+  "careerHorizon": {
+    "one_two_years": "1–2 yil",
+    "three_five_years": "3–5 yil",
+    "five_plus": "5+ yil",
+    "exploring": "O'rganmoqdaman"
+  },
+  "orgType": {
+    "startup": "Startap",
+    "corporate": "Korporatsiya",
+    "public_sector": "Davlat / NNT",
+    "freelance": "Frilans"
+  },
+  "teamPreference": {
+    "solo": "Mustaqil",
+    "small_team": "10 kishigacha jamoa",
+    "large_org": "Katta tashkilot",
+    "mixed": "Aralash"
+  },
+  "learningPath": {
+    "university": "Universitet",
+    "courses": "Kurslar",
+    "self_taught": "O'z-o'zidan",
+    "mentorship": "Mentorlik"
+  },
+  "motivationFocus": {
+    "expertise": "Mutaxassislik",
+    "impact": "Ijtimoiy ta'sir",
+    "income": "Daromad",
+    "balance": "Balans",
+    "prestige": "Obro'"
+  },
+  "interests": {
+    "code": "kod", "games": "o'yinlar", "math": "matematika", "design": "dizayn", "people": "odamlar",
+    "medicine": "tibbiyot", "marketing": "marketing", "business": "biznes", "creativity": "ijod",
+    "analytics": "analitika", "sports": "sport", "music": "musiqa", "science": "fan",
+    "law": "huquq", "engineering": "muhandislik", "languages": "tillar"
+  },
+  "avoid": {
+    "routine": "rutina", "sales": "sotuv", "blood": "qon", "code": "dasturlash",
+    "office": "ofis 5/2", "night_shifts": "tungi smena", "public_speaking": "nutq"
+  },
+  "skills": {
+    "english": "ingliz tili", "excel": "Excel", "drawing": "rasm", "python": "Python",
+    "communication": "muloqot", "driving": "haydovchilik guvohnomasi"
+  },
+  "lifestyle": {
+    "remote": "Masofadan", "travel": "Sayohat", "stability": "Barqaror 9–5",
+    "creativity": "Ijod", "low_stress": "Kam stress"
+  },
+  "educationStage": {
+    "school_7": "7-sinf", "school_8": "8-sinf", "school_9": "9-sinf",
+    "school_10": "10-sinf", "school_11": "11-sinf",
+    "school_graduate": "Bitiruvchi, kollej/universitet tanlayapman",
+    "student": "Talaba", "career_change": "Kasb almashtirish", "employed": "Ishlayman"
+  },
+  "country": {
+    "RU": "Rossiya", "KZ": "Qozog'iston", "UZ": "O'zbekiston", "BY": "Belarus", "KG": "Qirg'iziston", "REMOTE": "Masofadan (dunyo)"
+  },
+  "city": {
+    "ru_moscow": "Moskva", "ru_spb": "Sankt-Peterburg", "ru_kazan": "Kazan", "ru_novosibirsk": "Novosibirsk",
+    "ru_ekb": "Yekaterinburg", "ru_regions": "RF boshqa", "ru_remote": "RF masofadan",
+    "kz_almaty": "Olmaota", "kz_astana": "Astana", "kz_shymkent": "Chimkent", "kz_remote": "KZ masofadan",
+    "uz_tashkent": "Toshkent", "uz_samarkand": "Samarqand", "uz_remote": "UZ masofadan",
+    "by_minsk": "Minsk", "by_regions": "BY boshqa", "by_remote": "BY masofadan",
+    "kg_bishkek": "Bishkek", "kg_regions": "KG boshqa", "kg_remote": "KG masofadan",
+    "remote_global": "Global remote"
+  },
+  "results": {
+    "title": "5 kasbingiz", "subtitle": "Yosh va sinfingga mos", "intro": "Kasb nima va qachon boshlash",
+    "catalogTitle": "Katalogda yana {count} kasb",
+    "catalogSubtitle": "Istalganini och — kun, maosh, roadmap",
+    "catalogCta": "Katalogni ochish",
+    "retry": "Qayta", "noResults": "Natija yo'q",
+    "start": "Boshlash", "pdfPremium": "PDF (Premium)"
+  },
+  "profession": {
+    "notFound": "Kasb katalogda topilmadi.",
+    "notFoundCta": "Katalogni ochish",
+    "back": "← Natijalar", "dayTitle": "Kun", "roadmapTitle": "Roadmap",
+    "roadmapHint": "Brauzerda saqlanadi", "progress": "{done} / {total}",
+    "shareTitle": "AI-risk ulashish", "downloadPng": "PNG yuklab olish", "pdfPremium": "PDF (Premium)",
+    "aiRisk": "AI-risk", "perMonth": "/ oy",     "select": "Tanlash", "selected": "Tanlandi ✓", "openDay": "Kun →",
+    "aboutTitle": "Kasb haqida", "whenTitle": "Senga qachon"
+  },
+  "premium": {
+    "title": "Premium", "desc": "Cheksiz simulyatsiya va PDF — tez orada. Hozir: kuniga 1 bepul.",
+    "comingSoon": "To'lov v1.1 da. Email qoldiring.",
+    "waitlistEmail": "Email", "waitlistSubmit": "Premium waitlist", "waitlistSuccess": "Rahmat! Xabar beramiz.",
+    "price": "49", "perMonth": "/oy",
+    "feat1": "✓ Cheksiz", "feat2": "✓ PDF", "feat3": "✓ Tarix", "feat4": "✓ Taqqoslash (tez orada)",
+    "download": "TXT yuklab olish", "downloadPdf": "PDF yuklab olish", "payOneTime": "Hisobot 99000 so'm",
+    "needSimulate": "Avval simulyatsiya", "stripeNote": "Stripe havola yoki waitlist"
+  },
+  "legal": {
+    "contact": "Aloqa",
+    "footer": { "privacy": "Maxfiylik", "terms": "Shartlar", "about": "Loyiha" },
+    "privacy": { "title": "Maxfiylik siyosati", "body": "To'liq matn rus tilida: /privacy. Ma'lumotlar brauzer localStorage da; serverda IP bo'yicha kunlik limit. 12+. hello@careersimulator.app" },
+    "terms": { "title": "Foydalanish shartlari", "body": "Career Simulator — ta'lim vositasi, kasb maslahati emas. Maoshlar taxminiy. To'liq: /terms" },
+    "about": { "title": "Loyiha haqida", "body": "15 savol → 5 kasb, AI-risk, roadmap. 200+ kasb katalogda. Professional maslahat o'rnini bosmaydi." }
+  },
+  "b2b": {
+    "title": "Maktablar uchun B2B", "desc": "Sinf hisobotlari", "email": "Email", "school": "Maktab", "submit": "Waitlist", "success": "Saqlandi"
+  },
+  "demo": {
+    "tag": "Demo", "title": "17 yosh, kod yoqadi", "subtitle": "Namuna", "ownSim": "O'z simulyatsiyangiz →"
+  },
+  "matchReason": "Qiziqishlar ({interests}) va lifestyle ({lifestyle}) — «{title}» {region} uchun mos.",
+  "simulationDisclaimer": "Baholar taxminiy, professional maslahat emas.",
+  "aiRisk": {
+    "tooltip": "AI-risk — avtomatlashtirish ehtimoli",
+    "summary": "AI-risk — avtomatlashtirish bahosi.",
+    "learnMore": "Batafsil →",
+    "methodologyTitle": "AI-risk metodologiyasi",
+    "methodologyBody": "AI-risk 0–100% — 2030 yilgacha avtomatlashtirilishi mumkin vazifalar modeli. Maosh — mintaqa bo'yicha. Kasb maslahati emas.",
+    "contentEnriched": "Batafsil kontent",
+    "contentTemplate": "Asosiy shablon"
+  }
+}
