@@ -174,7 +174,7 @@
     "contact": "Aloqa",
     "footer": { "privacy": "Maxfiylik", "terms": "Shartlar", "about": "Loyiha" },
     "privacy": { "title": "Maxfiylik siyosati", "body": "To'liq matn rus tilida: /privacy. Ma'lumotlar brauzer localStorage da; serverda IP bo'yicha kunlik limit. 12+. hello@careersimulator.app" },
-    "terms": { "title": "Foydalanish shartlari", "body": "Career Simulator — ta'lim vositasi, kasb maslahati emas. Maoshlar taxminiy. To'liq: /terms" },
+    "terms": { "title": "Foydalanish shartlari", "body": "Career Simulator — ta'lim vositasi, kasb maslahati emas. Yosh: 12+. 16 yoshgacha — ota-ona bilan. To'liq: /terms?lang=ru" },
     "about": { "title": "Loyiha haqida", "body": "15 savol → 5 kasb, AI-risk, roadmap. 200+ kasb katalogda. Professional maslahat o'rnini bosmaydi." }
   },
   "b2b": {

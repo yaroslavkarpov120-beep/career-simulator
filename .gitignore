@@ -11,3 +11,5 @@ node_modules
 .tools/*.tar.gz
 .tools/gh.zip
 .tools/gh_*/
+.vercel
+.github/workflows/

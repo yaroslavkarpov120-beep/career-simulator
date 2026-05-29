@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import { Analytics } from "@/components/Analytics";
 import { AppFooter } from "@/components/AppFooter";
 import { DisclaimerBanner } from "@/components/DisclaimerBanner";
@@ -33,10 +34,10 @@ export const metadata: Metadata = {
     template: "%s | Career Simulator",
   },
   description:
-    "Симулятор карьеры для подростков: зарплаты, AI-risk и roadmap на 30 дней. 200+ профессий в каталоге.",
+    "Симулятор карьеры для подростков 12+: зарплаты, AI-risk и roadmap. 20 вопросов → 5 профессий, каталог 1000+ ролей.",
   openGraph: {
     title: "Career Simulator",
-    description: "15 questions → 5 careers with salary, AI-risk, and roadmap",
+    description: "20 questions → 5 careers with salary, AI-risk, and roadmap. 1000+ roles.",
     url: appUrl,
     siteName: "Career Simulator",
     locale: "ru_RU",
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Career Simulator",
-    description: "15 questions → 5 careers with salary, AI-risk, and roadmap",
+    description: "20 questions → 5 careers with salary, AI-risk, and roadmap",
   },
   robots: { index: true, follow: true },
 };
@@ -82,6 +83,7 @@ export default function RootLayout({
           </div>
         </noscript>
         <Analytics />
+        <VercelAnalytics />
         <ErrorBoundary>
           <LocaleProvider>
             <HtmlLang />

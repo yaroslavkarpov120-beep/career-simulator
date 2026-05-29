@@ -8,8 +8,9 @@
 5. **Сравнение:** IT vs медицина AI-risk side-by-side (2 вкладки).
 
 ## Посты
-- Telegram / школьные чаты: ссылка на `NEXT_PUBLIC_APP_URL` + «15 вопросов — 5 профессий».
-- B2B: `/b2b` waitlist для классного.
+- Telegram / школьные чаты: готовые тексты в [`SOFT_LAUNCH_POSTS.md`](./SOFT_LAUNCH_POSTS.md)
+- «20 вопросов — 5 профессий», каталог 1000+
+- B2B: `/b2b` waitlist для классного
 
 ## Soft launch
 См. [`LAUNCH_CHECKLIST.md`](./LAUNCH_CHECKLIST.md).

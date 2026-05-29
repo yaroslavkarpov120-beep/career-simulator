@@ -56,6 +56,7 @@ check "/terms" 200
 check "/about" 200
 check "/premium" 200
 check "/b2b" 200
+check "/api/health" 200
 
 BODY='{"locale":"ru","age":17,"educationStage":"school_11","interests":["code"],"countryCode":"RU","regionId":"ru-moscow","salaryMin":80000,"salaryMax":150000,"lifestyle":["remote"],"avoid":[],"skills":[]}'
 code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "${BASE}/api/simulate" \
