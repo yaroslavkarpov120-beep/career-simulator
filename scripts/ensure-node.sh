@@ -9,8 +9,21 @@ _finish() {
   export PATH="$NODE_DIR/bin:$PATH"
 }
 
-if [ -x "$NODE_BIN" ]; then
+# Vercel/CI/Linux: use platform Node from PATH
+if [ "$(uname -s)" != "Darwin" ]; then
+  if command -v node >/dev/null 2>&1; then
+    return 0 2>/dev/null || exit 0
+  fi
+  echo "❌ Node.js не найден в PATH"
+  return 1 2>/dev/null || exit 1
+fi
+
+if [ -x "$NODE_BIN" ] && "$NODE_BIN" -v >/dev/null 2>&1; then
   _finish
+  return 0 2>/dev/null || exit 0
+fi
+
+if command -v node >/dev/null 2>&1; then
   return 0 2>/dev/null || exit 0
 fi
 
