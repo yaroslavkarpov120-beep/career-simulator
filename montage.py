@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Montage script: dynamic documentary style (like the YouTube Shorts example).
-- 9:16 vertical output (576x1024)
-- Quick cuts 3s per clip, 18 clips total ~54 seconds
-- Zoom variations to simulate multi-camera look
-- Pixelize glitch transitions (0.08s)
-- Cinematic color grading: contrast +, warm shadows, slight sharpening
+Montage v2:
+- Mostly wide/mild crops (no aggressive zoom)
+- TikTok watermark removed via drawbox on full bottom strip
+- 9:16 vertical 576x1024 output
+- Pixelize glitch transitions 0.08s
+- Cinematic color grading
 """
 
 import subprocess
@@ -16,50 +16,57 @@ V1 = "/root/.claude/uploads/71cc495d-2d7d-5331-99a8-653e582218ca/0a52aed0-v15044
 V2 = "/root/.claude/uploads/71cc495d-2d7d-5331-99a8-653e582218ca/c80d493c-v1c044g50000d8om85fog65v5imrg4jg.mp4"
 OUT = "/home/user/career-simulator/montage.mp4"
 
-OUT_W, OUT_H = 576, 1024   # 9:16
-SRC = 576                   # source square side
+OUT_W, OUT_H = 576, 1024
+SRC = 576
+PAD_Y = (OUT_H - OUT_W) // 2  # 224
 
+# TikTok watermark occupies bottom ~95px (logo + username row)
+# Cover entire bottom strip so both left and right logos are gone
+WM = f"drawbox=x=0:y=481:w={SRC}:h=95:color=black:t=fill"
+
+# Crop helpers: (crop_w, crop_h, x, y)
 def wide():
     return (SRC, SRC, 0, 0)
 
-def zoom(size, cx=None, cy=None):
-    cx = cx if cx is not None else (SRC - size) // 2
-    cy = cy if cy is not None else (SRC - size) // 2
-    return (size, size, cx, cy)
+def mild(size=530):
+    """Subtle zoom from center — only ~8% crop each side."""
+    off = (SRC - size) // 2
+    return (size, size, off, off)
 
-def zoom_top(size=380):
-    return (size, size, (SRC - size) // 2, 0)
+def mild_top(size=530):
+    """Subtle zoom anchored to top — avoids cutting head."""
+    off = (SRC - size) // 2
+    return (size, size, off, 0)
 
-def zoom_bottom(size=380):
-    return (size, size, (SRC - size) // 2, SRC - size)
+def mild_center(size=510):
+    off = (SRC - size) // 2
+    return (size, size, off, off)
 
-# (source, start_sec, duration_sec, crop(w,h,x,y))
+# (source, start_sec, duration_sec, crop)
 clips = [
     (V1,   0,  3, wide()),
-    (V2,   0,  3, zoom(360)),
-    (V1,   4,  3, zoom_top(400)),
+    (V2,   0,  3, mild(530)),
+    (V1,   4,  3, mild_top(530)),
     (V2,   8,  3, wide()),
-    (V1,  10,  3, zoom(380)),
-    (V2,  14,  3, zoom_top(380)),
+    (V1,  10,  3, mild_center(510)),
+    (V2,  14,  3, mild_top(520)),
     (V1,  16,  3, wide()),
-    (V2,  22,  3, zoom(420)),
-    (V2,  30,  3, zoom_top(380)),
+    (V2,  22,  3, mild(530)),
+    (V2,  30,  3, mild_top(520)),
     (V1,  22,  3, wide()),
-    (V2,  40,  3, zoom(360)),
+    (V2,  40,  3, mild_center(510)),
     (V2,  50,  3, wide()),
-    (V1,  27,  3, zoom_top(400)),
-    (V2,  60,  3, zoom(380)),
+    (V1,  27,  3, mild_top(530)),
+    (V2,  60,  3, mild(530)),
     (V2,  75,  3, wide()),
-    (V2,  90,  3, zoom(400)),
-    (V2, 105,  3, zoom_top(380)),
+    (V2,  90,  3, mild_center(520)),
+    (V2, 105,  3, mild_top(530)),
     (V2, 118,  3, wide()),
 ]
 
 n = len(clips)
 TRANS_DUR = 0.08
-PAD_Y = (OUT_H - OUT_W) // 2   # = 224
 
-# Build ffmpeg input args and filter_complex
 input_args = []
 filter_lines = []
 
@@ -67,8 +74,10 @@ for i, (src, start, dur, _) in enumerate(clips):
     input_args += ["-ss", str(start), "-t", str(dur), "-i", src]
 
 for i, (_, _, _, (cw, ch, cx, cy)) in enumerate(clips):
+    # Apply watermark removal BEFORE crop, then crop, scale, pad
     filter_lines.append(
         f"[{i}:v]setpts=PTS-STARTPTS,"
+        f"{WM},"
         f"crop={cw}:{ch}:{cx}:{cy},"
         f"scale={OUT_W}:{OUT_W}:flags=lanczos,"
         f"pad={OUT_W}:{OUT_H}:0:{PAD_Y}:black"
@@ -78,25 +87,22 @@ for i, (_, _, _, (cw, ch, cx, cy)) in enumerate(clips):
         f"[{i}:a]asetpts=PTS-STARTPTS,volume=0.7[a{i}]"
     )
 
-# Chain xfade (video) and acrossfade (audio)
-prev_v = "v0"
-prev_a = "a0"
-cumulative_offset = 0.0
+# Chain xfade + acrossfade
+prev_v, prev_a = "v0", "a0"
+cumulative = 0.0
 
 for i in range(1, n):
-    cumulative_offset += clips[i - 1][2] - TRANS_DUR
-    nv = f"xv{i}"
-    na = f"xa{i}"
+    cumulative += clips[i - 1][2] - TRANS_DUR
+    nv, na = f"xv{i}", f"xa{i}"
     filter_lines.append(
-        f"[{prev_v}][v{i}]xfade=transition=pixelize:duration={TRANS_DUR}:offset={cumulative_offset:.4f}[{nv}]"
+        f"[{prev_v}][v{i}]xfade=transition=pixelize:duration={TRANS_DUR}:offset={cumulative:.4f}[{nv}]"
     )
     filter_lines.append(
         f"[{prev_a}][a{i}]acrossfade=d={TRANS_DUR}[{na}]"
     )
-    prev_v = nv
-    prev_a = na
+    prev_v, prev_a = nv, na
 
-# Color grading: contrast, warm shadows, sharpen, slight vignette via curves
+# Cinematic grade: contrast, warm shadows, sharpen
 filter_lines.append(
     f"[{prev_v}]"
     f"eq=contrast=1.35:brightness=-0.04:saturation=1.15,"
@@ -120,13 +126,13 @@ cmd = (
     + [OUT]
 )
 
-print(f"Running ffmpeg with {n} clips...")
+print(f"Rendering {n} clips...")
 result = subprocess.run(cmd, capture_output=True, text=True)
 
 if result.returncode != 0:
     print("ERROR:")
-    print(result.stderr[-4000:])
+    print(result.stderr[-5000:])
     sys.exit(1)
 
 size_mb = os.path.getsize(OUT) / 1024 / 1024
-print(f"Done! Output: {OUT}  ({size_mb:.1f} MB)")
+print(f"Done! {OUT}  ({size_mb:.1f} MB)")
