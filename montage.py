@@ -1,25 +1,15 @@
 #!/usr/bin/env python3
 """
-Montage v4 — длинные клипы по паузам речи.
+Montage v5 — 9:16 вертикальный формат с размытым фоном.
 
 Паузы выявлены через silencedetect -35dB:
   3.66-5.17 / 10.64-11.20 / 14.97-16.01 / 17.26-17.83 / 26.01-26.53 / 36.18-36.53
 
-Клипы (8 шт, 4-10 сек):
-  0.0  → 4.4   (4.4s)
-  5.2  → 10.9  (5.7s)
-  11.2 → 15.5  (4.3s)
-  16.0 → 26.3  (10.3s)
-  26.5 → 36.4  (9.9s)
-  36.5 → 46.5  (10.0s)  ← последний блок делим по ~10с (нет пауз)
-  46.5 → 56.5  (10.0s)
-  56.5 → 67.1  (10.6s)
+Клипы (8 шт, 4-10 сек) — те же что в v4.
 
-Изменения vs предыдущей версии:
-  - Переход: xfade fade 0.5s (плавный crossdissolve вместо вспышки)
-  - Качество: CRF 18 (было 26)
-  - Зумы: только mild/wide, без tight-face кропов
-  - Аудио: 100% без изменений
+Формат: 1080x1920 (9:16)
+  - Фон: исходный кадр масштабируется до 1920x1920, обрезается до 1080x1920, сильно размывается
+  - Передний план: исходный кадр 1080x1080 (с кропом/zoom), накладывается по центру (y=420)
 """
 
 import subprocess, os, sys
@@ -27,43 +17,35 @@ import subprocess, os, sys
 SRC = "/root/.claude/uploads/71cc495d-2d7d-5331-99a8-653e582218ca/645e545e-528835564375684052.mp4"
 OUT = "/home/user/career-simulator/montage.mp4"
 
-W = 1080
-TRANS = 0.5   # плавный crossfade
+OW, OH = 1080, 1920        # выходной размер 9:16
+PAD_Y  = (OH - OW) // 2   # = 420 — отступ сверху для переднего плана
+TRANS  = 0.5
 
-WM    = f"drawbox=x=0:y=980:w={W}:h=100:color=black:t=fill"
-GRAIN = "noise=c0s=12:c0f=t+u"   # лёгкий grain
+WM    = f"drawbox=x=0:y=980:w={OW}:h=100:color=black:t=fill"
+GRAIN = "noise=c0s=12:c0f=t+u"
 
 GRADES = [
     "eq=contrast=1.25:brightness=-0.01:saturation=1.1,"
-    "curves=r='0/0 0.3/0.33 1/1':b='0/0 0.3/0.27 1/0.96'",   # тёплый
-
+    "curves=r='0/0 0.3/0.33 1/1':b='0/0 0.3/0.27 1/0.96'",
     "eq=contrast=1.30:brightness=-0.03:saturation=0.92,"
-    "curves=r='0/0 0.3/0.28 1/0.96']:b='0/0 0.3/0.32 1/1.0'", # холодный
-
-    "eq=contrast=1.40:brightness=-0.05:saturation=1.12",        # контрастный
-
+    "curves=r='0/0 0.3/0.28 1/0.96':b='0/0 0.3/0.32 1/1.0'",
+    "eq=contrast=1.40:brightness=-0.05:saturation=1.12",
     "eq=contrast=1.25:saturation=0.60,"
-    "curves=r='0/0 0.3/0.28 1/0.96'",                          # ч/б doc
+    "curves=r='0/0 0.3/0.28 1/0.96'",
 ]
 
-# Исправим синтаксическую ошибку в grade 1 (лишняя ']')
-GRADES[1] = (
-    "eq=contrast=1.30:brightness=-0.03:saturation=0.92,"
-    "curves=r='0/0 0.3/0.28 1/0.96':b='0/0 0.3/0.32 1/1.0'"
-)
-
-def wide():      return (W,   W,   0,        0)
-def mild(s=960): o=(W-s)//2; return (s, s, o, o)
-def top(s=960):  o=(W-s)//2; return (s, s, o, 0)
+def wide():      return (OW,  OW,  0,           0)
+def mild(s=960): o=(OW-s)//2; return (s, s, o, o)
+def top(s=960):  o=(OW-s)//2; return (s, s, o, 0)
 
 # (start_sec, dur_sec, crop, grade)
 clips = [
-    (0.0,  4.4,  wide(),    0),   # пауза @ 3.66s
-    (5.2,  5.7,  mild(960), 1),   # пауза @ 10.64s
-    (11.2, 4.3,  top(960),  2),   # пауза @ 14.97s
-    (16.0, 10.3, wide(),    3),   # пауза @ 26.01s  (длинный блок)
-    (26.5, 9.9,  mild(960), 0),   # пауза @ 36.18s  (длинный блок)
-    (36.5, 10.0, top(960),  1),   # нет паузы, делим по 10с
+    (0.0,  4.4,  wide(),    0),
+    (5.2,  5.7,  mild(960), 1),
+    (11.2, 4.3,  top(960),  2),
+    (16.0, 10.3, wide(),    3),
+    (26.5, 9.9,  mild(960), 0),
+    (36.5, 10.0, top(960),  1),
     (46.5, 10.0, wide(),    2),
     (56.5, 10.6, mild(960), 3),
 ]
@@ -76,15 +58,25 @@ for i, (start, dur, _, __) in enumerate(clips):
     input_args += ["-ss", str(start), "-t", str(dur), "-i", SRC]
 
 for i, (_, _, (cw, ch, cx, cy), gi) in enumerate(clips):
+    # Разделяем поток на два: фон и передний план
     filter_lines.append(
-        f"[{i}:v]setpts=PTS-STARTPTS,"
-        f"{WM},"
-        f"crop={cw}:{ch}:{cx}:{cy},"
-        f"scale={W}:{W}:flags=lanczos,"
-        f"{GRADES[gi]},"
-        f"{GRAIN},"
-        f"format=yuv420p"
-        f"[v{i}]"
+        f"[{i}:v]setpts=PTS-STARTPTS,{WM},split=2[base{i}a][base{i}b]"
+    )
+    # Передний план: кроп + масштаб + цветокоррекция + grain
+    filter_lines.append(
+        f"[base{i}a]crop={cw}:{ch}:{cx}:{cy},"
+        f"scale={OW}:{OW}:flags=lanczos,"
+        f"{GRADES[gi]},{GRAIN},format=yuv420p[fg{i}]"
+    )
+    # Фон: масштаб до 1920x1920 → кроп центр 1080x1920 → сильное размытие
+    filter_lines.append(
+        f"[base{i}b]scale={OH}:{OH}:flags=lanczos,"
+        f"crop={OW}:{OH}:{(OH-OW)//2}:0,"
+        f"boxblur=luma_radius=28:luma_power=3,format=yuv420p[bg{i}]"
+    )
+    # Накладываем fg по центру bg
+    filter_lines.append(
+        f"[bg{i}][fg{i}]overlay=0:{PAD_Y}[v{i}]"
     )
     filter_lines.append(
         f"[{i}:a]asetpts=PTS-STARTPTS[a{i}]"
