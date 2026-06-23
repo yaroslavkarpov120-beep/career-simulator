@@ -16,9 +16,6 @@ export function NavLinks() {
       <Link href="/professions" className="hover:text-white">
         {t("nav.catalog")}
       </Link>
-      <Link href="/english" className="hover:text-white">
-        English
-      </Link>
       <Link
         href="/premium"
         className="rounded-full bg-brand-600 px-3 py-1 text-white hover:bg-brand-500"
